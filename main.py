@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from routers import stock_coordinates, calcATRandEMA
+from routers import stock_coordinates
+from routers import calcEMA, calcATR
 import uvicorn
 
 def create_app():
@@ -15,6 +16,8 @@ def create_app():
         allow_headers=["*"]
     )
     app.include_router(stock_coordinates.router)
+    app.include_router(calcEMA.router)
+    app.include_router(calcATR.router)
     return app
 
 
