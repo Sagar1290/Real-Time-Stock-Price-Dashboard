@@ -1,0 +1,6 @@
+fastapi
+yfinance
+pandas_datareader
+pydantic
+uvicorn
+ta
