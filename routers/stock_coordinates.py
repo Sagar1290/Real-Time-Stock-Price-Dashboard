@@ -8,7 +8,7 @@ yf.pdr_override()
 
 router = APIRouter()
 
-@router.get("/api/stock_coordinates/")
+@router.post("/api/stock_coordinates/")
 async def stock_coordinates(symbol: StockCoordinateDetails):
     print(symbol)
     if symbol:
